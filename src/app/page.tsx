@@ -3,7 +3,7 @@ import { Container } from "@/shared/ui";
 
 const Home = () => {
   return (
-    <Container>
+    <Container title="PDF Creator">
       <PDFCreate />
     </Container>
   );
