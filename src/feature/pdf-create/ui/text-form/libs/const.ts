@@ -1,5 +1,5 @@
-import { FormTextValues } from "./types";
+import { FormTextValues } from './types'
 
 export const defaultValues: FormTextValues = {
-  text: "",
-};
+  text: ''
+}

@@ -1,1 +1,1 @@
-export * from "./useTextForm";
+export * from './useTextForm'

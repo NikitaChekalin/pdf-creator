@@ -1,1 +1,1 @@
-export * from "./use-create-pdf";
+export * from './use-create-pdf'

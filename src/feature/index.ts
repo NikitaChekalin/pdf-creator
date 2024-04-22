@@ -1,1 +1,1 @@
-export * from "./pdf-create/PDFCreate";
+export * from './pdf-create/PDFCreate'

@@ -1,32 +1,28 @@
-"use client";
+'use client'
 
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
 
-import {
-  FormTextValues,
-  defaultValues,
-  textFormValidationSchema,
-} from "../libs";
+import { FormTextValues, defaultValues, textFormValidationSchema } from '../libs'
 
 export const useTextForm = () => {
   const {
     control,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm<FormTextValues>({
     defaultValues,
-    resolver: yupResolver(textFormValidationSchema),
-  });
+    resolver: yupResolver(textFormValidationSchema)
+  })
 
   const onSubmit = (data: FormTextValues) => {
-    console.log("data", data);
-  };
+    console.log('data', data)
+  }
 
   return {
     control,
     onSubmit,
     handleSubmit,
-    errors,
-  };
-};
+    errors
+  }
+}
