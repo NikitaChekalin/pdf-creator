@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "@/shared/lib";
+import { ReactQueryProvider } from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ const RootLayout = ({ children }: RootLayout) => {
           fontSans.variable
         )}
       >
-        {children}
+        <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
     </html>
   );

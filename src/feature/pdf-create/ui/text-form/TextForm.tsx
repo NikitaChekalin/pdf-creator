@@ -5,7 +5,7 @@ import { useTextForm } from "./hook";
 import { Button, Form, Textarea } from "@/shared/ui";
 
 export const TextForm = () => {
-  const { handleSubmit, control, errors, onSubmit } = useTextForm();
+  const { handleSubmit, control, errors, onSubmit, isLoading } = useTextForm();
 
   return (
     <Form.Root onSubmit={handleSubmit(onSubmit)}>
@@ -22,7 +22,12 @@ export const TextForm = () => {
           )}
         />
 
-        <Button type="submit" title="Конвертувати в PDF" className="self-end" />
+        <Button
+          type="submit"
+          title="Конвертувати в PDF"
+          className="self-end"
+          isLoading={isLoading}
+        />
       </Form.Content>
     </Form.Root>
   );

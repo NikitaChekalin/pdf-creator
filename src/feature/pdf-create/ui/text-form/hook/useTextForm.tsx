@@ -8,6 +8,7 @@ import {
   defaultValues,
   textFormValidationSchema,
 } from "../libs";
+import { useCreatePdf } from "@/shared/hooks";
 
 export const useTextForm = () => {
   const {
@@ -19,8 +20,12 @@ export const useTextForm = () => {
     resolver: yupResolver(textFormValidationSchema),
   });
 
-  const onSubmit = (data: FormTextValues) => {
-    console.log("data", data);
+  const { mutateAsync: createPdf, isPending } = useCreatePdf();
+
+  const onSubmit = async ({ text }: FormTextValues) => {
+    const result = await createPdf(text);
+
+    console.log(result, "result");
   };
 
   return {
@@ -28,5 +33,6 @@ export const useTextForm = () => {
     onSubmit,
     handleSubmit,
     errors,
+    isLoading: isPending,
   };
 };

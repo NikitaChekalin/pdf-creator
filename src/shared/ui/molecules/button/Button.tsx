@@ -1,8 +1,9 @@
 import { cn } from "@/shared/lib";
 import React from "react";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface Button extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
+  isLoading?: boolean;
   className?: string;
   onClick?: () => void;
 }
@@ -11,18 +12,21 @@ export const Button = ({
   title,
   onClick,
   className,
+  isLoading = false,
   ...props
-}: ButtonProps) => {
+}: Button) => {
   return (
     <button
       {...props}
       onClick={onClick}
+      disabled={isLoading}
       className={cn(
-        "bg-blue-500 hover:bg-blue-700 text-white  py-2 px-4 rounded",
+        "bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded",
+        isLoading ? "opacity-50 cursor-not-allowed" : "",
         className
       )}
     >
-      {title}
+      {isLoading ? "Loading..." : title}
     </button>
   );
 };
