@@ -1,3 +1,3 @@
 export type FormTextValues = {
-  text: string;
-};
+  text: string
+}
