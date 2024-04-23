@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 
 import { cn } from '@/shared/lib'
 
+import { ReactQueryProvider } from './providers'
+
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -23,7 +25,7 @@ const RootLayout = ({ children }: RootLayout) => {
   return (
     <html lang='en'>
       <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
-        {children}
+        <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
     </html>
   )

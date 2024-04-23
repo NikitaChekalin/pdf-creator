@@ -3,7 +3,7 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
-import { FormTextValues, defaultValues, textFormValidationSchema } from '../libs'
+import { defaultValues, FormTextValues, textFormValidationSchema } from '../libs'
 
 export const useTextForm = () => {
   const {
@@ -15,8 +15,12 @@ export const useTextForm = () => {
     resolver: yupResolver(textFormValidationSchema)
   })
 
-  const onSubmit = (data: FormTextValues) => {
-    console.log('data', data)
+  const onSubmit = async ({ text }: FormTextValues) => {
+    const { data } = await fetch('/api', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text })
+    }).then((res) => res.json())
   }
 
   return {

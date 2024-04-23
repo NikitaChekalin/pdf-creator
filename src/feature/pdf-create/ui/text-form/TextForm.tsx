@@ -1,8 +1,10 @@
 'use client'
 
 import { Controller } from 'react-hook-form'
-import { useTextForm } from './hook'
+
 import { Button, Form, Textarea } from '@/shared/ui'
+
+import { useTextForm } from './hook'
 
 export const TextForm = () => {
   const { handleSubmit, control, errors, onSubmit } = useTextForm()
