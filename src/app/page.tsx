@@ -1,10 +1,13 @@
-import { PDFCreate } from '@/feature'
+'use client'
+
+import { History, PDFCreate } from '@/feature'
 import { Container } from '@/shared/ui'
+import { Pdf } from '@/widgets'
 
 const Home = () => {
   return (
     <Container title='PDF Creator'>
-      <PDFCreate />
+      <Pdf />
     </Container>
   )
 }

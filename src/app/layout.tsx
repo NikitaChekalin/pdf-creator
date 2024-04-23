@@ -23,8 +23,8 @@ interface RootLayout {
 
 const RootLayout = ({ children }: RootLayout) => {
   return (
-    <html lang='en'>
-      <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
+    <html lang='en' className='h-full'>
+      <body className={cn('h-full bg-background font-sans antialiased', fontSans.variable)}>
         <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
     </html>

@@ -2,12 +2,17 @@
 
 import { Controller } from 'react-hook-form'
 
+import { HistoryFile } from '@/shared/@types'
 import { Button, Form, Textarea } from '@/shared/ui'
 
 import { useTextForm } from './hook'
 
-export const TextForm = () => {
-  const { handleSubmit, control, errors, onSubmit } = useTextForm()
+interface TextForm {
+  onSaveHistoryConversion: (file: HistoryFile) => void
+}
+
+export const TextForm = ({ onSaveHistoryConversion }: TextForm) => {
+  const { handleSubmit, control, errors, onSubmit } = useTextForm({ onSaveHistoryConversion })
 
   return (
     <Form.Root onSubmit={handleSubmit(onSubmit)}>
