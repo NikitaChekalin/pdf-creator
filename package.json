@@ -6,29 +6,43 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier -w ."
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
+    "@react-pdf-viewer/core": "^3.12.0",
     "@tabler/icons-react": "^3.2.0",
     "@tanstack/react-query": "^5.31.0",
     "axios": "^1.6.8",
     "clsx": "^2.1.0",
     "next": "14.2.2",
+    "pdf-viewer-reactjs": "^2.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.3",
+    "react-pdf": "^7.7.1",
     "tailwind-merge": "^2.3.0",
-    "yup": "^1.4.0"
+    "yup": "^1.4.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/pdf-viewer-reactjs": "^2.2.5",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
     "eslint-config-next": "14.2.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^17.2.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "eslint-prettier-config": "^1.0.1",
     "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
     "tailwindcss": "^3.4.3",
     "typescript": "^5"
   }
