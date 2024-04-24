@@ -21,13 +21,7 @@ export const TextForm = ({ onSaveHistoryConversion }: TextForm) => {
         <Controller
           name='text'
           control={control}
-          render={({ field }) => (
-            <Textarea
-              {...field}
-              placeholder='Артем Шевченко Валерійович'
-              error={errors.text?.message}
-            />
-          )}
+          render={({ field }) => <Textarea {...field} error={errors.text?.message} />}
         />
 
         <Button type='submit' title='Конвертувати в PDF' className='self-end' />
