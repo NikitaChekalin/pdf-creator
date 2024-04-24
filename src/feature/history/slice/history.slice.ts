@@ -1,22 +1,31 @@
-'use client'
-
 import create from 'zustand'
 
-import { History, HistoryFile } from '@/shared/@types'
+import { History, HistoryConversion, HistoryFile } from '@/shared/@types'
 
 export interface useHistoryStore {
-  historyConversion: History | []
+  historyConversions: History
+  activeHistoryItem: HistoryConversion | null
+
   setHistoryConversion: (file: HistoryFile) => void
+  setActiveHistoryItem: (item: HistoryConversion) => void
 }
 
-export const useHistoryStore = create<useHistoryStore>()((set) => ({
-  historyConversion: [],
+export const useHistoryStore = create<useHistoryStore>((set, get) => ({
+  historyConversions: [],
+  activeHistoryItem: null,
 
-  setHistoryConversion: (file: HistoryFile) =>
+  setHistoryConversion: (file: HistoryFile) => {
+    const { historyConversions } = get()
+    const historyConversionNumber = historyConversions.length + 1
+
+    const historyConversionItem = { ...file, number: historyConversionNumber }
+
     set((state) => ({
-      historyConversion: [
-        ...state.historyConversion,
-        { ...file, number: state.historyConversion.length + 1 }
-      ]
+      ...state,
+      historyConversions: [...state.historyConversions, historyConversionItem],
+      activeHistoryItem: historyConversionItem
     }))
+  },
+
+  setActiveHistoryItem: (item: HistoryConversion) => set(() => ({ activeHistoryItem: item }))
 }))

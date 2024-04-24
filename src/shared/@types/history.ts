@@ -1,9 +1,9 @@
-export type HistoryConversions = {
+export type HistoryConversion = {
   date: string
   base64: string
   number: number
 }
 
-export type History = HistoryConversions[]
+export type History = HistoryConversion[]
 
-export type HistoryFile = Omit<HistoryConversions, 'number'>
+export type HistoryFile = Omit<HistoryConversion, 'number'>

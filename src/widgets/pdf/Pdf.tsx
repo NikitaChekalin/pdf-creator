@@ -1,12 +1,15 @@
-import { History, PDFCreate, useHistoryStore } from '@/feature'
+import { History, PDFConvert, useHistoryStore } from '@/feature'
 
 export const Pdf = () => {
-  const { setHistoryConversion, historyConversion } = useHistoryStore()
+  const { setHistoryConversion, activeHistoryItem } = useHistoryStore()
 
   return (
     <div className='h-full flex flex-row gap-4 justify-between'>
-      <PDFCreate onSaveHistoryConversion={setHistoryConversion} />
-      <History historyConversion={historyConversion} />
+      <PDFConvert
+        onSaveHistoryConversion={setHistoryConversion}
+        activeHistoryItem={activeHistoryItem?.base64 || ''}
+      />
+      <History />
     </div>
   )
 }

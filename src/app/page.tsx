@@ -1,6 +1,5 @@
 'use client'
 
-import { History, PDFCreate } from '@/feature'
 import { Container } from '@/shared/ui'
 import { Pdf } from '@/widgets'
 

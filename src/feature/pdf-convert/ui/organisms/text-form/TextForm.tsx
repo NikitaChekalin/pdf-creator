@@ -12,7 +12,9 @@ interface TextForm {
 }
 
 export const TextForm = ({ onSaveHistoryConversion }: TextForm) => {
-  const { handleSubmit, control, errors, onSubmit } = useTextForm({ onSaveHistoryConversion })
+  const { handleSubmit, control, errors, onSubmit } = useTextForm({
+    onSaveHistoryConversion
+  })
 
   return (
     <Form.Root onSubmit={handleSubmit(onSubmit)}>

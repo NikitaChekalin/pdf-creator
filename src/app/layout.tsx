@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
+import { Children } from '@/shared/@types'
 import { cn } from '@/shared/lib'
-
-import { ReactQueryProvider } from './providers'
 
 import './globals.css'
 
@@ -17,15 +16,11 @@ const fontSans = Inter({
   variable: '--font-sans'
 })
 
-interface RootLayout {
-  children: React.ReactNode
-}
-
-const RootLayout = ({ children }: RootLayout) => {
+const RootLayout = ({ children }: Children) => {
   return (
     <html lang='en' className='h-full'>
       <body className={cn('h-full bg-background font-sans antialiased', fontSans.variable)}>
-        <ReactQueryProvider>{children}</ReactQueryProvider>
+        {children}
       </body>
     </html>
   )
