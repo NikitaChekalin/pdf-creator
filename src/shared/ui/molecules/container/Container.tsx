@@ -1,4 +1,3 @@
-import React from 'react'
 import { Divider } from '../../atoms'
 
 interface Container {
@@ -7,8 +6,8 @@ interface Container {
 }
 
 export const Container = ({ children, title }: Container) => (
-  <main className='flex flex-col items-center justify-between'>
-    <div className='w-full max-w-3xl p-24'>
+  <main className='h-full flex flex-col items-center justify-between'>
+    <div className='h-full w-full max-w-4xl p-12'>
       <h1 className='text-3xl font-bold text-gray-500'>{title}</h1>
       <Divider />
       {children}

@@ -1,7 +1,7 @@
+import { Children } from '@shared/@types'
+import { cn } from '@shared/lib'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
-import { cn } from '@/shared/lib'
 
 import './globals.css'
 
@@ -15,14 +15,10 @@ const fontSans = Inter({
   variable: '--font-sans'
 })
 
-interface RootLayout {
-  children: React.ReactNode
-}
-
-const RootLayout = ({ children }: RootLayout) => {
+const RootLayout = ({ children }: Children) => {
   return (
-    <html lang='en'>
-      <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
+    <html lang='en' className='h-full'>
+      <body className={cn('h-full bg-background font-sans antialiased', fontSans.variable)}>
         {children}
       </body>
     </html>
