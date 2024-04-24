@@ -25,9 +25,11 @@ export const useTextForm = ({ onSaveHistoryConversion }: UseTextForm) => {
   })
 
   const onSubmit = async ({ text }: FormTextValues) => {
+    //here cant use api handler POST because it's return invalid blob file, but I tried
     const data = await createPdfRequest('78684310-850d-427a-8432-4a6487f6dbc4', text).then((res) =>
       getBase64FromBlob(res)
     )
+
     const historyItem = {
       base64: data as string,
       date: getFormattedDate()
