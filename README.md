@@ -15,11 +15,6 @@ Project: SkillForge
 ### Arhitecture
 
 - widgets (top layer, only widget can use more than one feature)
-- feature
-
-### Arhitecture
-
-- widgets (top layer, only widget can use more than one feature)
 - features (history , pdf-convert)
 
 ### Metodology
