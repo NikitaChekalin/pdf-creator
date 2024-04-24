@@ -1,9 +1,8 @@
 'use client'
 
 import { Controller } from 'react-hook-form'
-
-import { HistoryFile } from '@/shared/@types'
-import { Button, Form, Textarea } from '@/shared/ui'
+import { HistoryFile } from '@shared/@types'
+import { Button, Form, Textarea } from '@shared/ui'
 
 import { useTextForm } from './hook'
 

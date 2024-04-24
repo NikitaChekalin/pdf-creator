@@ -1,7 +1,7 @@
 'use client'
 
-import { Container } from '@/shared/ui'
-import { Pdf } from '@/widgets'
+import { Container } from '@shared/ui'
+import { Pdf } from '@widgets'
 
 const Home = () => {
   return (

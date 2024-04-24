@@ -17,8 +17,26 @@
         "name": "next"
       }
     ],
+
     "paths": {
-      "@/*": ["./src/*"]
+      "@widgets": ["./src/widgets/index.ts"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@feature": ["./src/feature/index.ts"],
+      "@feature/*": ["./src/feature/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@ui/*": ["./src/shared/ui/*"],
+      "@lib": ["./src/shared/lib/index.ts"],
+      "@lib/*": ["./src/shared/lib/*"],
+      "@constants": ["./src/shared/constants/index.ts"],
+      "@constants/*": ["./src/shared/constants/*"],
+      "@utils": ["./src/shared/utils/index.ts"],
+      "@utils/*": ["./src/shared/utils/*"],
+      "@helpers": ["./src/shared/helpers/index.ts"],
+      "@helpers/*": ["./src/shared/helpers/*"],
+      "@services": ["./src/shared/services/index.ts"],
+      "@services/*": ["./src/shared/services/*"],
+      "@types": ["./src/shared/types/index.ts"],
+      "@types/*": ["./src/shared/types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

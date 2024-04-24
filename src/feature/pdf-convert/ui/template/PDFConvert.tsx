@@ -1,6 +1,6 @@
 'use client'
 
-import { HistoryFile } from '@/shared/@types'
+import { HistoryFile } from '@shared/@types'
 
 import { PdfViewer } from '../atoms'
 import { TextForm } from '../organisms'

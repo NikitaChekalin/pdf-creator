@@ -1,6 +1,5 @@
+import { createPdfRequest } from '@shared/services'
 import { NextResponse } from 'next/server'
-
-import { createPdfRequest } from '@/shared/services'
 
 export const POST = async (request: Request) => {
   const { text } = await request.json()

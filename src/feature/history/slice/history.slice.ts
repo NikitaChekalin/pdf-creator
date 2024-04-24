@@ -1,6 +1,5 @@
-import create from 'zustand'
-
-import { History, HistoryConversion, HistoryFile } from '@/shared/@types'
+import { History, HistoryConversion, HistoryFile } from '@shared/@types'
+import { create } from 'zustand'
 
 export interface useHistoryStore {
   historyConversions: History

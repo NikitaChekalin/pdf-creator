@@ -1,7 +1,6 @@
+import { HistoryConversion } from '@shared/@types'
+import { cn } from '@shared/lib'
 import { IconHistory } from '@tabler/icons-react'
-
-import { HistoryConversion } from '@/shared/@types'
-import { cn } from '@/shared/lib'
 
 import { useHistoryStore } from '../../slice'
 import { Conversion } from '../molecules'

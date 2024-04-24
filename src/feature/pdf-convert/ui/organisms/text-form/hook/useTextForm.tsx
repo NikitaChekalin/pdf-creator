@@ -2,9 +2,8 @@
 
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-
-import { HistoryFile } from '@/shared/@types'
-import { createPdfRequest } from '@/shared/services'
+import { HistoryFile } from '@shared/@types'
+import { createPdfRequest } from '@shared/services'
 
 import { defaultValues, FormTextValues, textFormValidationSchema } from '../libs'
 import { getBase64FromBlob, getFormattedDate } from '../util'

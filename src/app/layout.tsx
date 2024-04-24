@@ -1,8 +1,7 @@
+import { Children } from '@shared/@types'
+import { cn } from '@shared/lib'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
-import { Children } from '@/shared/@types'
-import { cn } from '@/shared/lib'
 
 import './globals.css'
 

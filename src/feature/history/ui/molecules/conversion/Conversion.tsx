@@ -1,6 +1,5 @@
+import { cn } from '@shared/lib'
 import { IconFileTypePdf } from '@tabler/icons-react'
-
-import { cn } from '@/shared/lib'
 
 export interface Conversion {
   number: number

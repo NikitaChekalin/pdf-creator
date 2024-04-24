@@ -1,4 +1,4 @@
-import { cn } from '@/shared/lib'
+import { cn } from '@shared/lib'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string

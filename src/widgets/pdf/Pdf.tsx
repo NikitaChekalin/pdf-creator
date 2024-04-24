@@ -1,4 +1,4 @@
-import { History, PDFConvert, useHistoryStore } from '@/feature'
+import { History, PDFConvert, useHistoryStore } from '@feature'
 
 export const Pdf = () => {
   const { setHistoryConversion, activeHistoryItem } = useHistoryStore()
